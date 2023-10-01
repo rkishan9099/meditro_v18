@@ -89,8 +89,9 @@ class ContactUs extends Component{
 												</div>
 												<div className="icon-box">
 													<h6 className="title"><i className="ti-id-badge"></i>Email &amp; Phone</h6>		
-													<Link to="#" className="text-white">info@keymedsolution.com</Link>
-													<p>+1 (336) 496-8296</p>
+													<a href="mailto:info@keymedsolution.com" className="text-white">info@keymedsolution.com</a>
+													<br/>
+													<a href="tel:+13362906077" className="text-white">+1 (336) 290-6077</a>
 												</div>
 												<div className="icon-box">
 													<h6 className="title"><i className="ti-world"></i>Follow Us</h6>
@@ -117,8 +118,8 @@ class ContactUs extends Component{
 											<img src={icon1} alt=""/>
 										</div>
 										<div className="icon-content">
-											<h5 className="ttr-title">Contact Number</h5>
-											<p>+1 (336) 496-8296</p>
+											<h5 className="ttr-title">Contact Number</h5><br/>
+											<p><a href="tel:+13362906077">+1 (336) 290-6077</a></p>
 										</div>
 									</div>
 								</div>
