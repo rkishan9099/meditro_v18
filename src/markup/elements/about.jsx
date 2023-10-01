@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // Import Images
 import aboutThumb1 from '../../images/about/pic-1.jpg';
@@ -23,17 +23,17 @@ class aboutSection extends Component{
 										<li><img className="about-thumb1" src={aboutThumb1} alt=""/></li>
 										<li><img className="about-thumb2" src={aboutThumb2} alt=""/></li>
 										<li><img className="about-thumb3" src={aboutThumb3} alt=""/></li>
-										<li><div className="exp-bx">20<span>Year Experience</span></div></li>
+										<li><div className="exp-bx">06<span>Years of Experience</span></div></li>
 									</ul>
 								</div>
 							</div>
 							<div className="col-lg-6 mb-30">
 								<div className="heading-bx">
-									<h6 className="title-ext text-secondary">About Us</h6>
-									<h2 className="title">The Great Place Of Medical Hospital Center</h2>
-									<p>We provide the special tips and advice’s of heath care treatment and high level of best technology involve in the our hospital.</p>
+									<h6 className="title-ext text-secondary">Our Identity</h6>
+									<h2 className="title">What Makes Us Different</h2>
+									<p>Key MedSolutions is a leading global company providing highly personalized services in medical billing and revenue cycle management. Our team of innovative leaders brings a modern and technological approach to the industry, offering unparalleled professionalism and analysis. We strive to optimize revenue management for healthcare providers worldwide through our comprehensive range of services, including claims management, billing, and revenue cycle management.</p>
 								</div>
-								<div className="row">
+								{/* <div className="row">
 									<div className="col-lg-6 col-sm-6 mb-30 mb-sm-20">
 										<div className="feature-container feature-bx1 feature1">
 											<div className="icon-md">
@@ -99,8 +99,8 @@ class aboutSection extends Component{
 											</div>
 										</div>
 									</div>
-								</div>
-								<Link to="/about-us" className="btn btn-primary shadow">Read More</Link>
+								</div> */}
+								{/* <Link to="/about-us" className="btn btn-primary shadow">Read More</Link> */}
 							</div>
 						</div>
 					</div>

@@ -26,9 +26,7 @@
 		height: 420px;
 		vertical-align: middle;
 		display: table-cell;
-		padding-top: 40px;
 		padding-bottom: 60px;
-		
 		@include respond('tab-port'){
 			height: 320px;
 			padding-bottom: 30px;			

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // Import Images
 import bg1 from '../../images/main-banner/bg1.jpg';
@@ -19,9 +19,10 @@ class aboutSection extends Component{
 					<div className="container inner-content">
 						<div className="row align-items-center">
 							<div className="col-lg-7 col-md-6 col-sm-7">
-								<h6 className="title-ext text-primary">We Provide All Health Care Solution</h6>
-								<h1>Protect Your Health And Take Care To Of Your Health</h1>
-								<Link to="/about-us" className="btn btn-secondary btn-lg shadow">Read More</Link>
+								<h6 className="title-ext text-primary">Who we are</h6>
+								<h1>Key MedSolutions</h1>
+								<p>We are a healthcare revenue cycle management and medical billing company that helps healthcare providers worldwide to optimize their revenue collection while reducing administrative overhead.Their comprehensive solutions encompass the entire medical billing cycle, and they offer specialized services such as contract management and revenue cycle consulting.Key MedSolutions is a reliable partner for healthcare practitioners and facilities seeking to improve their revenue cycle management and achieve financial success.</p>
+								{/* <Link to="/about-us" className="btn btn-secondary btn-lg shadow">Read More</Link> */}
 							</div>
 							<div className="col-lg-5 col-md-6 col-sm-5">
 								<div className="banner-img">

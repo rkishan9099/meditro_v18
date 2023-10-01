@@ -13,8 +13,8 @@ $grid-columns: 12;
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
     @for $i from 1 through $grid-columns {
         .col-xxl-#{$i} {
-            flex: 0 0 percentage($i / $grid-columns);
-            max-width: percentage($i / $grid-columns);
+            flex: 0 0 calc($i / $grid-columns);
+            max-width: calc($i / $grid-columns);
         }
     }
     
