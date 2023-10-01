@@ -9,7 +9,6 @@ class FormLogin extends Component{
 	render(){
 		return (
 			<>
-			
 				<div className="section-area account-wraper2">
 					<div className="container">
 						<div className="row justify-content-center">

@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
+// Layout
+import Header from "../layout/header2";
+import Footer from "../layout/footer";
+
 // Elements
 import FeatureSection3 from "../elements/feature-section3";
 import TeamSection from "../elements/team";
@@ -18,6 +22,8 @@ class Services extends Component{
 	render(){
 		return (
 			<>
+				
+				<Header />
 				
 				<div className="page-content bg-white">
 					
@@ -169,6 +175,8 @@ class Services extends Component{
 					<LatestNewsSection />
 					
 				</div>
+				
+				<Footer />
 				
 			</>
 		);

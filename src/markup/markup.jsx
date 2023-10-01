@@ -6,8 +6,8 @@ import BackToTop from './elements/back-top';
 import PageScrollTop from './elements/page-scroll-top';
 
 // Layout
-import Header from "./layout/header";
-import Footer from "./layout/footer";
+// import Header from "./layout/header";
+// import Footer from "./layout/footer";
 
 // All Pages Router
 import Index from './pages/index';
@@ -22,8 +22,27 @@ import Faq from './pages/faq';
 import ContactUs from './pages/contact-us';
 import Booking from './pages/booking';
 import BlogGrid from './pages/blog-grid';
-import BlogDetails from './pages/blog-details';
 import Error from './pages/error-404';
+import PhysicianBillingServices from './pages/physician-billing-services';
+import MedicalClaimBilling from './pages/medical-claim-billing';
+import InternalMedicineAndNephrologyBillingServices from './pages/internal-medicine-and-nephrology-billing-service';
+import RadiologyBillingServices from './pages/radiology-billing-services';
+import CardiologyMedicalBilling from './pages/cardiology-medical-billing';
+import ImprovingYourFinancialHealthWithProfitEnhancementServices from './pages/improving-your-financial-health-with-profit-enhancement-services';
+import ICD10MedicalCoding from './pages/ICD-10-medical-coding';
+import MedicalBillingCodingServices from './pages/medical-billing-coding-services';
+import MaximizeYourReimbursementRateWithOurMedicalBillingAndCollectionServices from './pages/maximize-your-reimbursement-rate-with-our-medical-billing-and-collection-services';
+import StreamliningMedicalARRecovery from './pages/streamlining-medical-AR-recovery';
+import PracticeManagement from './pages/practice-management';
+import VerificationOfHealthcareInsuranceEligibility from './pages/verification-of-healthcare-insurance-eligibility';
+import RevenueCycleManagementCompany from './pages/revenue-cycle-management-company';
+import DenialManagementServices from './pages/denial-management-service';
+import PhysicianCredentialing from './pages/physician-credentialing';
+import OurSpecialities from './pages/our-specialities';
+import BlogDetails1 from './pages/blog-details-1';
+import BlogDetails2 from './pages/blog-details-2';
+import BlogDetails3 from './pages/blog-details-3';
+// import handler from './pages/api/mail';
 
 class Markup extends Component{
 	render(){
@@ -35,6 +54,7 @@ class Markup extends Component{
 					<Routes>
 						
 						<Route element={<ThemeLayout />}>
+							<Route path="*" element={<Error />} />
 							<Route path='/' element={<Index />} />
 							<Route path='/about-us' element={<AboutUs />} />
 							<Route path='/team' element={<Team />} />
@@ -43,9 +63,28 @@ class Markup extends Component{
 							<Route path='/faq' element={<Faq />} />
 							<Route path='/contact-us' element={<ContactUs />} />
 							<Route path='/booking' element={<Booking />} />
-							<Route path='/blog-grid' element={<BlogGrid />} />
-							<Route path='/blog-details' element={<BlogDetails />} />
-							<Route path="*" element={<Error />} />
+							<Route path='/blogs' element={<BlogGrid />} />
+							{/* <Route path='/blog-details' element={<BlogDetails />} /> */}
+							{/* <Route path='/api/mail'  exact component={handler}/> */}
+							<Route path='/blog-details-1'  element={<BlogDetails1 />} />
+							<Route path='/blog-details-2'  element={<BlogDetails2/>} />
+							<Route path='/blog-details-3'  element={<BlogDetails3/>} />
+							<Route path='/physician-billing-services'  element={<PhysicianBillingServices/>} />
+							<Route path='/medical-claim-billing'  element={<MedicalClaimBilling/>} />	
+							<Route path='/internal-medicine-and-nephrology-billing-service'  element={<InternalMedicineAndNephrologyBillingServices/>} />	
+							<Route path='/radiology-billing-services'  element={<RadiologyBillingServices/>} />
+							<Route path='/cardiology-medical-billing'  element={<CardiologyMedicalBilling/>} />
+							<Route path='/improving-your-financial-health-with-profit-enhancement-services'  element={<ImprovingYourFinancialHealthWithProfitEnhancementServices/>} />
+							<Route path='/medical-billing-coding-services'  element={<MedicalBillingCodingServices/>} />
+							<Route path='/ICD-10-medical-coding'  element={<ICD10MedicalCoding/>} />
+							<Route path='/maximize-your-reimbursement-rate-with-our-medical-billing-and-collection-services'  element={<MaximizeYourReimbursementRateWithOurMedicalBillingAndCollectionServices/>} />
+							<Route path='/streamlining-medical-AR-recovery'  element={<StreamliningMedicalARRecovery/>} />
+							<Route path='/practice-management'  element={<PracticeManagement/>} />
+							<Route path='/verification-of-healthcare-insurance-eligibility'  element={<VerificationOfHealthcareInsuranceEligibility/>} />
+							<Route path='/revenue-cycle-management-company'  element={<RevenueCycleManagementCompany/>} />
+							<Route path='/denial-management-service'  element={<DenialManagementServices/>} />
+							<Route path='/physician-credentialing'  element={<PhysicianCredentialing/>} />
+							<Route path='/our-specialities'  element={<OurSpecialities />} />
 						</Route>
 						
 						<Route path="/form-login" element={<FormLogin />} />
@@ -68,9 +107,9 @@ class Markup extends Component{
 function ThemeLayout(){
 	return(
 		<>
-			<Header />
+			{/* <Header /> */}
 			<Outlet />
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 }

@@ -7,6 +7,7 @@ import logo from '../../images/logo.png';
 // import logoWhite from '../../images/logo-white.png';
 // import keymedSolution from '../../images/key-medsolutions.svg'
 
+
 class Header extends Component{
 	
 	componentDidMount() {
@@ -53,12 +54,13 @@ class Header extends Component{
                 current.classList.add('open');
             }
         }
+		
     }
 	
 	render(){
 		return(
 			<>
-				<header className="header header-transparent rs-nav">
+				<header className="header rs-nav">
 					<Sticky enabled={true} className="sticky-header navbar-expand-lg">
 						<div className="menu-bar clearfix">
 							<div className="container-fluid clearfix">
@@ -73,7 +75,7 @@ class Header extends Component{
 								<div className="secondary-menu">
 									<ul>
 										{/* <li className="search-btn"><button id="quikSearchBtn" type="button" className="btn-link"><i className="las la-search"></i></button></li> */}
-										<li className="num-bx"><a href="tel:+13364968296"><i className="fas fa-phone-alt"></i> +1 (336) 496-8296</a></li>
+										<li className="num-bx"><a href="tel:+13364968296"><i className="fas fa-phone-alt"></i>+1 (336) 496-8296</a></li>
 										<li className="btn-area"><Link to="/contact-us" className="btn btn-primary shadow">CONTACT US <i className="btn-icon-bx fas fa-chevron-right"></i></Link></li>
 									</ul>
 								</div>
@@ -114,7 +116,8 @@ class Header extends Component{
 										</li>
 										<li><Link to="/our-specialities"><span>Our Specialties</span></Link></li>
 										<li><Link to="/blogs"><span>Blogs</span></Link></li>
-										{/* <li>
+										{/* <li><Link to="/blog"><span>Blog</span></Link></li>
+										<li>
 											<Link to="#">Contact Us</Link>
 											<ul className="sub-menu">												
 												<li><Link to="/service-detail"><span>Submit Inquiry</span></Link></li>
@@ -178,10 +181,10 @@ class Header extends Component{
 										{/* <li><Link to="/contact-us">Contact Us</Link></li> */}
 									</ul>
 									<ul className="social-media">
-										<li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/" className="btn btn-primary"><i className="fab fa-facebook-f"></i></a></li>
-										<li><a target="_blank" rel="noreferrer" href="https://www.google.com/" className="btn btn-primary"><i className="fab fa-google"></i></a></li>
-										<li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/" className="btn btn-primary"><i className="fab fa-linkedin-in"></i></a></li>
-										<li><a target="_blank" rel="noreferrer" href="https://twitter.com/" className="btn btn-primary"><i className="fab fa-twitter"></i></a></li>
+										<li><a rel="noreferrer" target="_blank" href="https://www.facebook.com/" className="btn btn-primary"><i className="fab fa-facebook-f"></i></a></li>
+										<li><a rel="noreferrer" target="_blank" href="https://www.google.com/" className="btn btn-primary"><i className="fab fa-google"></i></a></li>
+										<li><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/" className="btn btn-primary"><i className="fab fa-linkedin-in"></i></a></li>
+										<li><a rel="noreferrer" target="_blank" href="https://twitter.com/" className="btn btn-primary"><i className="fab fa-twitter"></i></a></li>
 									</ul>
 									<div className="menu-close" id="menuClose">
 										<i className="ti-close"></i>

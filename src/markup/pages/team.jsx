@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
+// Layout
+import Header from "../layout/header2";
+import Footer from "../layout/footer";
+
 // Import Images
 import bnrImg1 from "../../images/banner/img1.jpg";
 import trangleOrange from "../../images/shap/trangle-orange.png";
@@ -17,66 +21,36 @@ import teamMember5 from "../../images/team/member5.jpg";
 import teamMember6 from "../../images/team/member6.jpg";
 
 // Team Content
-const teamMembers = [
+const content = [
 	{ 
 		thumb: teamMember1,
 		title: "Dr. Addition Smith",		
 		subtitle: "Dentist",
-		socialMedia: [
-			{ platform: 'Twitter', link: 'https://twitter.com/' },
-			{ platform: 'LinkedIn', link: 'https://www.linkedin.com/' },
-			{ platform: 'Instagram', link: 'https://www.instagram.com/' },
-		],
 	},
 	{ 
 		thumb: teamMember2,
 		title: "Dr. Mahfuz Riad",		
 		subtitle: "Chiropractor",
-		socialMedia: [
-			{ platform: 'Twitter', link: 'https://twitter.com/' },
-			{ platform: 'LinkedIn', link: 'https://www.linkedin.com/' },
-			{ platform: 'Instagram', link: 'https://www.instagram.com/' },
-		],
 	},
 	{ 
 		thumb: teamMember3,
 		title: "Dr. David Benjamin",		
 		subtitle: "Cardiologist",
-		socialMedia: [
-			{ platform: 'Twitter', link: 'https://twitter.com/' },
-			{ platform: 'LinkedIn', link: 'https://www.linkedin.com/' },
-			{ platform: 'Instagram', link: 'https://www.instagram.com/' },
-		],
 	},
 	{ 
 		thumb: teamMember4,
 		title: "Dr. Addition Smith",		
 		subtitle: "Dentist",
-		socialMedia: [
-			{ platform: 'Twitter', link: 'https://twitter.com/' },
-			{ platform: 'LinkedIn', link: 'https://www.linkedin.com/' },
-			{ platform: 'Instagram', link: 'https://www.instagram.com/' },
-		],
 	},
 	{ 
 		thumb: teamMember5,
 		title: "Dr. Mahfuz Riad",		
 		subtitle: "Chiropractor",
-		socialMedia: [
-			{ platform: 'Twitter', link: 'https://twitter.com/' },
-			{ platform: 'LinkedIn', link: 'https://www.linkedin.com/' },
-			{ platform: 'Instagram', link: 'https://www.instagram.com/' },
-		],
 	},
 	{ 
 		thumb: teamMember6,
 		title: "Dr. David Benjamin",		
 		subtitle: "Cardiologist",
-		socialMedia: [
-			{ platform: 'Twitter', link: 'https://twitter.com/' },
-			{ platform: 'LinkedIn', link: 'https://www.linkedin.com/' },
-			{ platform: 'Instagram', link: 'https://www.instagram.com/' },
-		],
 	},
 ]
 
@@ -85,6 +59,8 @@ class Team extends Component{
 	render(){
 		return (
 			<>
+				
+				<Header />
 				
 				<div className="page-content bg-white">
 					
@@ -110,46 +86,38 @@ class Team extends Component{
 					<section className="section-area section-sp1 team-wraper">
 						<div className="container">
 							<div className="row">
-								{teamMembers.map((teamMember, index) =>(
-									<div key={index} className="col-lg-4 col-sm-6">
+								{content.map((item) =>(
+									<div className="col-lg-4 col-sm-6">
 										<div className="team-member mb-30">
 											<div className="team-media">
-												<img src={teamMember.thumb} alt=""/>
+												<img src={item.thumb} alt=""/>
 											</div>
 											<div className="team-info">
 												<div className="team-info-comntent">
-													<h4 className="title">{teamMember.title}</h4>
-													<span className="text-secondary">{teamMember.subtitle}</span>
+													<h4 className="title">{item.title}</h4>
+													<span className="text-secondary">{item.subtitle}</span>
 												</div>
-												<ul className="social-media mt-3">
-												{teamMember.socialMedia.map((social, index) => (
-													<li key={index}>
-														<a rel="noreferrer" target="_blank" href={social.link}>
-															<i className={`fab fa-${social.platform.toLowerCase()}`} />
-														</a>
-													</li>
-												))}
-											</ul>
+												<ul className="social-media">
+													<li><a rel="noreferrer" target="_blank" href="https://twitter.com/"><i className="fab fa-twitter"></i></a></li>
+													<li><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/"><i className="fab fa-linkedin"></i></a></li>
+													<li><a rel="noreferrer" target="_blank" href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a></li>
+												</ul>
 											</div>
 										</div>
 									</div>
 								))}
 							</div>
 						</div>
-						
 						<img className="pt-img1 animate1" src={trangleOrange} alt=""/>
-						
 						<img className="pt-img2 animate2" src={squareDotsOrange} alt=""/>
-						
 						<img className="pt-img3 animate-rotate" src={lineCircleBlue} alt=""/>
-						
 						<img className="pt-img4 animate-wave" src={waveBlue} alt=""/>
-						
 						<img className="pt-img5 animate-wave" src={plusBlue} alt=""/>
-						
 					</section>
 					
 				</div>
+				
+				<Footer />
 				
 			</>
 		);

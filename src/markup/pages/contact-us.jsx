@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
+// Layout
+import Header from "../layout/header2";
+import Footer from "../layout/footer";
+
 // Import Images
 import bnrImg1 from "../../images/banner/img1.jpg";
 import pic1 from "../../images/about/pic-1.jpg";
@@ -17,6 +21,8 @@ class ContactUs extends Component{
 	render(){
 		return (
 			<>
+				
+				<Header />
 				
 				<div className="page-content bg-white">
 					
@@ -58,17 +64,17 @@ class ContactUs extends Component{
 												</div>
 												<div className="form-group col-md-12">
 													<select className="form-select form-control">
-														<option defaultValue="Selecty Department">Selecty Department</option>
-														<option defaultValue="1">One</option>
-														<option defaultValue="2">Two</option>
-														<option defaultValue="3">Three</option>
+														<option selected>Selecty Department</option>
+														<option value="1">One</option>
+														<option value="2">Two</option>
+														<option value="3">Three</option>
 													</select>
 												</div>
 												<div className="form-group col-md-12">
 													<textarea name="message" required className="form-control" placeholder="Type Message"></textarea>
 												</div>
 												<div className="col-lg-12">
-													<button name="submit" type="submit" defaultValue="Submit" className="btn w-100 btn-secondary btn-lg">Submit</button>
+													<button name="submit" type="submit" value="Submit" className="btn w-100 btn-secondary btn-lg">Submit</button>
 												</div>
 											</div>
 										</form>
@@ -79,12 +85,12 @@ class ContactUs extends Component{
 												<h4 className="title mb-30">Contact Us For Any Informations</h4>
 												<div className="icon-box">
 													<h6 className="title"><i className="ti-map-alt"></i>Location</h6>		
-													<p>2005 Stokes Isle Apt. 896, Venaville 10010, USA</p>
+													<p>Greensboro, North Carolina, USA</p>
 												</div>
 												<div className="icon-box">
 													<h6 className="title"><i className="ti-id-badge"></i>Email &amp; Phone</h6>		
-													<Link to="#" className="text-white">info@yourdomain.com</Link>
-													<p>(+68) 120034509</p>
+													<Link to="#" className="text-white">info@keymedsolution.com</Link>
+													<p>+1 (336) 496-8296</p>
 												</div>
 												<div className="icon-box">
 													<h6 className="title"><i className="ti-world"></i>Follow Us</h6>
@@ -112,8 +118,7 @@ class ContactUs extends Component{
 										</div>
 										<div className="icon-content">
 											<h5 className="ttr-title">Contact Number</h5>
-											<p>+001 123 456 790</p>
-											<p>+002 3424 44 00</p>
+											<p>+1 (336) 496-8296</p>
 										</div>
 									</div>
 								</div>
@@ -124,8 +129,7 @@ class ContactUs extends Component{
 										</div>
 										<div className="icon-content">
 											<h5 className="ttr-title">Email Address</h5>
-											<p>info@yourdomain.com</p>
-											<p>example@support.com</p>
+											<p>info@keymedsolution.com</p>
 										</div>
 									</div>
 								</div>
@@ -136,7 +140,7 @@ class ContactUs extends Component{
 										</div>
 										<div className="icon-content">
 											<h5 className="ttr-title">Address</h5>
-											<p>2005 Stokes Isle Apt. 896, Venaville 10010, USA</p>
+											<p>Greensboro, North Carolina, USA</p>
 										</div>
 									</div>
 								</div>
@@ -145,6 +149,8 @@ class ContactUs extends Component{
 					</section>
 				
 				</div>
+				
+				<Footer />
 				
 			</>
 		);

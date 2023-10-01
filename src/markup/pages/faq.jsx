@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Accordion} from 'react-bootstrap';
 
+// Layout
+import Header from "../layout/header2";
+import Footer from "../layout/footer";
+
 // Elements
 import LatestNewsSection from "../elements/latest-news-slider";
 
@@ -16,6 +20,8 @@ class Faq extends Component{
 	render(){
 		return (
 			<>
+				
+				<Header />
 				
 				<div className="page-content bg-white">
 					
@@ -128,7 +134,9 @@ class Faq extends Component{
 					<LatestNewsSection />
 					
 				</div>
-			
+				
+				<Footer />
+				
 			</>
 		);
 	}

@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+// Layout
+import Header from "../layout/header2";
+import Footer from "../layout/footer";
+
 // Elements
 import AuthorProfile from "../elements/author-profile";
 import CommentList from "../elements/comment-list";
@@ -26,6 +30,8 @@ class BlogDetails extends Component{
 	render(){
 		return (
 			<>
+				
+				<Header />
 				
 				<div className="page-content bg-white">
 					
@@ -131,7 +137,9 @@ class BlogDetails extends Component{
 					</section>
 					
 				</div>
-			
+				
+				<Footer />
+				
 			</>
 		);
 	}

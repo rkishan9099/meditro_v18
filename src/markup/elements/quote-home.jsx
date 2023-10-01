@@ -44,7 +44,7 @@ class QuoteHome extends Component{
 							<div className="contact-wraper">
 								<div className="row">
 									<div className="col-lg-6 mb-30">
-										<form onSubmit={handleOnSubmit} method="POST" enctype="text/plain" className="form-wraper contact-form ajax-form">
+										<form onSubmit={handleOnSubmit} method="POST" encType="text/plain" className="form-wraper contact-form ajax-form">
 											<div className="ajax-message"></div>
 											<div className="row">
 												<div className="form-group col-md-12">

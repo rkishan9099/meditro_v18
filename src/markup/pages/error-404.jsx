@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
+// Layout
+import Header from "../layout/header2";
+import Footer from "../layout/footer";
+
 // Import Images
 import bnrImg1 from "../../images/banner/img1.jpg";
 import waveBlue from "../../images/shap/wave-blue.png";
@@ -12,6 +16,8 @@ class Error extends Component{
 	render(){
 		return (
 			<>
+				
+				<Header />
 				
 				<div className="page-content bg-white">
 					
@@ -50,6 +56,8 @@ class Error extends Component{
 					</section>
 					
 				</div>
+				
+				<Footer />
 				
 			</>
 		);
