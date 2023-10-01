@@ -58,7 +58,7 @@ class aboutSection extends Component{
 										<div className="contact-number">
 											<span>Contact Us</span>
 											<a href="mailto:info@keymedsolution.com">info@keymedsolution.com</a><br />
-											<a href="tel:+13364968296">+1 (336) 496-8296</a>
+											<a href="tel:+13362906077">+1 (336) 290-6077</a>
 										</div>
 									</div><br /> 
 									<div className="footer-social-link">
