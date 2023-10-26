@@ -42,6 +42,7 @@ import OurSpecialities from './pages/our-specialities';
 import BlogDetails1 from './pages/blog-details-1';
 import BlogDetails2 from './pages/blog-details-2';
 import BlogDetails3 from './pages/blog-details-3';
+import BlogDetails4 from './pages/blog-details-4';
 // import handler from './pages/api/mail';
 
 class Markup extends Component{
@@ -65,10 +66,11 @@ class Markup extends Component{
 							<Route path='/booking' element={<Booking />} />
 							<Route path='/blogs' element={<BlogGrid />} />
 							{/* <Route path='/blog-details' element={<BlogDetails />} /> */}
-							{/* <Route path='/api/mail'  exact component={handler}/> */}
+							{/* <Route path='/api/mail' element={handler}/> */}
 							<Route path='/blog-details-1'  element={<BlogDetails1 />} />
 							<Route path='/blog-details-2'  element={<BlogDetails2/>} />
 							<Route path='/blog-details-3'  element={<BlogDetails3/>} />
+							<Route path='/blog-details-4'  element={<BlogDetails4 />} />
 							<Route path='/physician-billing-services'  element={<PhysicianBillingServices/>} />
 							<Route path='/medical-claim-billing'  element={<MedicalClaimBilling/>} />	
 							<Route path='/internal-medicine-and-nephrology-billing-service'  element={<InternalMedicineAndNephrologyBillingServices/>} />	

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import handler from '../pages/api/mail';
 // Import Images
 import bnrImg1 from "../../images/banner/img1.jpg";
@@ -10,8 +10,9 @@ import animateRotate from "../../images/shap/plus-blue.png";
 
 
 class QuoteHome extends Component{
-	
 	render(){
+		// const sgMail = require('@sendgrid/mail');
+		// sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 		async function handleOnSubmit(e) {
 			e.preventDefault();
 		  
@@ -22,10 +23,27 @@ class QuoteHome extends Component{
 			  formData[field.name] = field.value;
 			});
             console.log(formData);
-			// await fetch('/api/mail', {
-			//   method: 'POST',
-			//   body: JSON.stringify(formData)
-			// });
+			// const msg = {
+			// 	to: 'parthchauhan05@gmail.com', // Change to your recipient
+			// 	from: 'info@keymedsolution.com', // Change to your verified sender,
+			// 	subject: `[Global UpHire] New application for ${formData.name}`,
+			// 	html:`
+			// 	<!DOCTYPE html>
+			// 	<html lang="en">
+			// 	<head>
+			// 		<meta charset="UTF-8" />
+			// 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			// 		<title></title>
+			// 	</head>
+			// 	<body>
+			// 		<p>${formData.message}</p>
+			// 	</body>
+			// 	</html>`
+			// }
+			// sgMail.send(msg).then(() => {
+			// 	console.log('Email sent!');
+			// })
+
 		  }
 		return (
 			<>

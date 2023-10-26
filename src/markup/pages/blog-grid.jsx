@@ -21,7 +21,7 @@ import testPic3 from "../../images/testimonials/pic3.jpg";
 // import blogGridPic3 from "../../images/blog/grid/pic3.jpg";
 // import blogGridPic4 from "../../images/blog/grid/pic4.jpg";
 // import blogGridPic5 from "../../images/blog/grid/pic5.jpg";
-// import blogGridPic6 from "../../images/blog/grid/pic6.jpg";
+import blogGridPic6 from "../../images/blog/grid/pic6.jpg";
 import blogGridPic7 from "../../images/blog/grid/pic7.jpg";
 import blogGridPic8 from "../../images/blog/grid/pic8.jpg";
 import blogGridPic9 from "../../images/blog/grid/pic9.jpg";
@@ -49,6 +49,14 @@ const content = [
 		title: "Boost Your Practice's Performance with Revenue Cycle KPIs",		
 		author: "Dr. Patel",
 		date: "23 July 2021",
+	},
+	{
+		id: 4,
+		thumb: blogGridPic6,
+		authorPic: testPic3,
+		title: "How Chiropractic Billing Services Work for Medicare Beneficiaries",		
+		author: "Dr. Patel",
+		date: "26 October 2021",
 	}
 ]
 
