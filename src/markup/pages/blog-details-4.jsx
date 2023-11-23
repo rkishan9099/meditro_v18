@@ -51,7 +51,7 @@ class BlogDetails4 extends Component{
 										<div className="info-bx">
 											<ul className="post-meta">
 												{/* <li className="author"><Link to="/blog-details"><img src={testPic3} alt=""/> Sonar Moyna</Link></li> */}
-												<li className="date"><i className="far fa-calendar-alt"></i>26 October 2021</li>
+												<li className="date"><i className="far fa-calendar-alt"></i>26 October 2023</li>
 											</ul>
 											<div className="ttr-post-title">
 												<h2 className="post-title">How Chiropractic Billing Services Work for Medicare Beneficiaries</h2>

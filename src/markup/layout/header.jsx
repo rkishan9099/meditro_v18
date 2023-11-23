@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Sticky from 'react-stickynode';
 
 // Images
-import logo from '../../images/logo.png';
+import logo from '../../images/logo2.png';
 // import logoWhite from '../../images/logo-white.png';
 // import keymedSolution from '../../images/key-medsolutions.svg'
 
@@ -114,6 +114,7 @@ class Header extends Component{
 										</li>
 										<li><Link to="/our-specialities"><span>Our Specialties</span></Link></li>
 										<li><Link to="/blogs"><span>Blogs</span></Link></li>
+										<li><a href="https://calendly.com/key_medsolutions_inc/30min" target='_blank' rel="noreferrer">Book an Appointment</a></li>
 										{/* <li>
 											<Link to="#">Contact Us</Link>
 											<ul className="sub-menu">												

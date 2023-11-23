@@ -288,6 +288,11 @@ class OurSpecialities extends Component{
 														<h6 className='mb-0'>Wound Care</h6>
 													</div>
 												</div>
+												<div className="col-lg-3 col-sm-6 mb-30">
+													<div className="work-bx" style={{width: "220px"}}>
+														<h6 className='mb-0'>Laboratory & Ultrasound Billing</h6>
+													</div>
+												</div>
 											</div>
 										</div>
 										<img className="pt-img1 animate1" src={ptImg1} alt=""/>

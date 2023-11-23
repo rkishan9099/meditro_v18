@@ -46,7 +46,7 @@ class BlogDetails2 extends Component{
 										<div className="info-bx">
 											<ul className="post-meta">
 												{/* <li className="author"><Link to="/blog-details"><img src={testPic3} alt=""/> Sonar Moyna</Link></li> */}
-												<li className="date"><i className="far fa-calendar-alt"></i> 19 July 2021</li>
+												<li className="date"><i className="far fa-calendar-alt"></i> 19 August 2023</li>
 											</ul>
 											<div className="ttr-post-title">
 												<h2 className="post-title">How AI is Improving Medical Coding Processes Accuracy and Efficiency</h2>
