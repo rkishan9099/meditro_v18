@@ -20,7 +20,7 @@ import testPic3 from "../../images/testimonials/pic3.jpg";
 // import blogGridPic2 from "../../images/blog/grid/pic2.jpg";
 // import blogGridPic3 from "../../images/blog/grid/pic3.jpg";
 // import blogGridPic4 from "../../images/blog/grid/pic4.jpg";
-// import blogGridPic5 from "../../images/blog/grid/pic5.jpg";
+import blogGridPic5 from "../../images/blog/grid/pic5.jpg";
 import blogGridPic6 from "../../images/blog/grid/pic6.jpg";
 import blogGridPic7 from "../../images/blog/grid/pic7.jpg";
 import blogGridPic8 from "../../images/blog/grid/pic8.jpg";
@@ -35,6 +35,7 @@ const content = [
 		title: "How medical coding impacts the revenue cycle?",		
 		author: "Key MedSolutions",
 		date: "15 July 2023",
+		url: '/blog-details-1'
 	}, 	{
 		id: 2,
 		thumb: blogGridPic8,
@@ -42,6 +43,7 @@ const content = [
 		title: "How AI is Improving Medical Coding Processes Accuracy and Efficiency",		
 		author: "Key MedSolutions",
 		date: "19 Aug 2023",
+		url: '/blog-details-2'
 	},	{
 		id: 3,
 		thumb: blogGridPic7,
@@ -49,6 +51,7 @@ const content = [
 		title: "Boost Your Practice's Performance with Revenue Cycle KPIs",		
 		author: "Key MedSolutions",
 		date: "23 Sept 2023",
+		url: '/blog-details-3'
 	},
 	{
 		id: 4,
@@ -57,6 +60,16 @@ const content = [
 		title: "How Chiropractic Billing Services Work for Medicare Beneficiaries",		
 		author: "Key MedSolutions",
 		date: "26 Oct 2023",
+		url: '/blog-details-4'
+	},
+	{
+		id: 5,
+		thumb: blogGridPic5,
+		authorPic: testPic3,
+		title: "Optimize Healthcare Finances: RCM Mastery Unleashed",		
+		author: "Key MedSolutions",
+		date: "21 Dec 2023",
+		url: '/optimize-healthcare-Finances-rcm-mastery-unleashed'
 	}
 ]
 
@@ -92,7 +105,7 @@ class BlogGrid extends Component{
 									<div className="col-xl-4 col-md-6">
 										<div className="blog-card mb-30">
 											<div className="post-media">
-												<Link to={`/blog-details-${item.id}`}><img src={item.thumb} alt=""/></Link>
+												<Link to={item.url}><img src={item.thumb} alt=""/></Link>
 											</div>
 											<div className="post-info">
 												<ul className="post-meta">
@@ -100,7 +113,7 @@ class BlogGrid extends Component{
 													<li className="date"><i className="far fa-calendar-alt"></i> {item.date}</li>
 												</ul>
 												<h4 className="post-title"><Link to={`/blog-details-${item.id}`}>{item.title}</Link></h4>		
-												<Link to={`/blog-details-${item.id}`} className="btn btn-outline-primary btn-sm">Read More <i className="btn-icon-bx fas fa-chevron-right"></i></Link>		
+												<Link to={item.url} className="btn btn-outline-primary btn-sm">Read More <i className="btn-icon-bx fas fa-chevron-right"></i></Link>		
 											</div>
 										</div>							
 									</div>
