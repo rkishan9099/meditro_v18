@@ -68,10 +68,10 @@ class Markup extends Component{
 							<Route path='/blogs' element={<BlogGrid />} />
 							{/* <Route path='/blog-details' element={<BlogDetails />} /> */}
 							{/* <Route path='/api/mail' element={handler}/> */}
-							<Route path='/blog-details-1'  element={<BlogDetails1 />} />
-							<Route path='/blog-details-2'  element={<BlogDetails2/>} />
-							<Route path='/blog-details-3'  element={<BlogDetails3/>} />
-							<Route path='/blog-details-4'  element={<BlogDetails4 />} />
+							<Route path='/how-medical-coding-impacts-the-revenue-cycle'  element={<BlogDetails1 />} />
+							<Route path='/how-AI-is-improving-medical-coding-processes-accuracy-and-efficiency'  element={<BlogDetails2/>} />
+							<Route path="/boost-your-practice's-performance-with-revenue-cycle-kpis"  element={<BlogDetails3/>} />
+							<Route path='/how-chiropractic-billing-services-work-for-medicare-beneficiaries'  element={<BlogDetails4 />} />
 							<Route path='/optimize-healthcare-Finances-rcm-mastery-unleashed'  element={<OptimizeHealthcareFinancesRcmMasteryUnleashed />} />
 							<Route path='/physician-billing-services'  element={<PhysicianBillingServices/>} />
 							<Route path='/medical-claim-billing'  element={<MedicalClaimBilling/>} />	

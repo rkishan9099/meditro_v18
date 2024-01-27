@@ -35,7 +35,7 @@ const content = [
 		title: "How medical coding impacts the revenue cycle?",		
 		author: "Key MedSolutions",
 		date: "15 July 2023",
-		url: '/blog-details-1'
+		url: '/how-medical-coding-impacts-the-revenue-cycle'
 	}, 	{
 		id: 2,
 		thumb: blogGridPic8,
@@ -43,7 +43,7 @@ const content = [
 		title: "How AI is Improving Medical Coding Processes Accuracy and Efficiency",		
 		author: "Key MedSolutions",
 		date: "19 Aug 2023",
-		url: '/blog-details-2'
+		url: '/how-AI-is-improving-medical-coding-processes-accuracy-and-efficiency'
 	},	{
 		id: 3,
 		thumb: blogGridPic7,
@@ -51,7 +51,7 @@ const content = [
 		title: "Boost Your Practice's Performance with Revenue Cycle KPIs",		
 		author: "Key MedSolutions",
 		date: "23 Sept 2023",
-		url: '/blog-details-3'
+		url: "/boost-your-practice's-performance-with-revenue-cycle-kpis"
 	},
 	{
 		id: 4,
@@ -60,7 +60,7 @@ const content = [
 		title: "How Chiropractic Billing Services Work for Medicare Beneficiaries",		
 		author: "Key MedSolutions",
 		date: "26 Oct 2023",
-		url: '/blog-details-4'
+		url: '/how-chiropractic-billing-services-work-for-medicare-beneficiaries'
 	},
 	{
 		id: 5,
