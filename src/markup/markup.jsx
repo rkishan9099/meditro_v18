@@ -44,6 +44,8 @@ import BlogDetails2 from './pages/blog-details-2';
 import BlogDetails3 from './pages/blog-details-3';
 import BlogDetails4 from './pages/blog-details-4';
 import OptimizeHealthcareFinancesRcmMasteryUnleashed from './pages/optimize-healthcare-Finances-rcm-mastery-unleashed';
+import HomePage1 from './pages/home-1';
+import HomePage2 from './pages/home-2';
 // import handler from './pages/api/mail';
 
 class Markup extends Component{
@@ -58,6 +60,8 @@ class Markup extends Component{
 						<Route element={<ThemeLayout />}>
 							<Route path="*" element={<Error />} />
 							<Route path='/' element={<Index />} />
+							<Route path='/home-1' element={<HomePage1 />} />
+							<Route path='/home-2' element={<HomePage2 />} />
 							<Route path='/about-us' element={<AboutUs />} />
 							<Route path='/team' element={<Team />} />
 							<Route path='/services' element={<Services />} />

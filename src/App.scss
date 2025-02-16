@@ -1,17 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./scss/main";
 
-.App{
+.App {
   text-align: center;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,14 +29,318 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App-link {
   color: #61dafb;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.hero-main-2 {
+  position: relative;
+  background: none;
+  /* Remove background from the main div */
+}
+
+.hero-main-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/home/homw-2main.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(1.15);
+  z-index: -1;
+  /* Send it behind the content */
+}
+
+.how-it-works {
+  position: relative;
+  background: none;
+  /* Remove background from the main div */
+}
+
+.how-it-works::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/home/medicatioIconBg.png");
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(1.15);
+  z-index: -1;
+  /* Send it behind the content */
+}
+
+.how-it-works-home1 {
+  position: relative;
+  background: none;
+  /* Remove background from the main div */
+}
+
+.how-it-works-home1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/background/footer-shape.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  // filter: brightness(1.18);
+  z-index: -10;
+  /* Send it behind the content */
+}
+
+.benefits-section-home1 {
+  position: relative;
+  background: none;
+  /* Remove background from the main div */
+
+}
+
+.benefits-section-home1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/background/footer.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  // filter: brightness(1.18);
+  z-index: -10;
+  /* Send it behind the content */
+}
+.final-cta {
+  position: relative;
+  background: none;
+}
+
+.final-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/main-banner/bg1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // filter: brightness(1.18);
+  z-index: -10;
+  /* Send it behind the content */
+}
+.why-evaluate-home2 {
+  position: relative;
+  background: none;
+  /* Remove background from the main div */
+
+}
+
+.why-evaluate-home2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/background/doctor-telescope-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(1.18);
+  z-index: -10;
+  /* Send it behind the content */
+}
+
+
+.polygon-right-point-clip-path {
+  clip-path: polygon(0% 0%, 55% 0, 100% 50%, 55% 100%, 0% 100%);
+}
+
+.appointment-one__bg {
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+
+
+.appointment-one__bg__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+.appointment-one__bg__shape {
+  width: 804px;
+  height: 804px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -266px;
+  bottom: -292px;
+  transform: rotate(-135deg);
+  border-radius: 260px;
+  background-color: rgba(161, 163, 243, 0.1);
+  /* Updated */
+  z-index: 1;
+}
+
+.appointment-one__bg__shape__1 {
+  width: 629px;
+  height: 629px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  background-color: rgba(161, 163, 243, 0.15);
+  /* Updated */
+}
+
+.appointment-one__bg__shape__2 {
+  width: 435px;
+  height: 435px;
+  border-radius: 50%;
+  background-color: rgba(161, 163, 243, 0.2);
+  /* Updated */
+}
+
+
+.border-gradient {
+  --border-width: 1px;
+  --radius: 24px;
+
+  position: relative;
+  border-radius: var(--radius);
+  border: var(--border-width) solid transparent;
+}
+
+
+.border-gradient::before {
+  content: " ";
+  position: absolute;
+  inset: calc(var(--border-width) * -1);
+  z-index: -1;
+  border: inherit;
+  border-radius: inherit;
+  background-image: conic-gradient(
+    from var(--angle),
+    #e9e9fc 10%,
+    #dadbfb 30%,
+    #3b82f6 50%,  /* Bright Blue */
+    #f97316 70%,  /* Vibrant Orange */
+    #f4f5fd 85%,
+    #f2f2ff 100%
+  );
+  background-origin: border-box;
+  -webkit-mask:
+    linear-gradient(black, black) content-box,
+    linear-gradient(black, black);
+  mask: linear-gradient(black, black),
+        linear-gradient(black, black);
+  -webkit-mask-clip: content-box, border-box;
+  mask-clip: content-box, border-box;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin 3s linear infinite;
+}
+
+@supports not (background: paint(something)) {
+  .border-gradient::before {
+    background-image: conic-gradient(
+      #e9e9fc 10%,
+      #dadbfb 30%,
+      #3b82f6 50%,
+      #f97316 70%,
+      #f4f5fd 85%,
+      #f2f2ff 100%
+    );
+  }
+}
+
+.border-gradient:hover::before {
+  animation-play-state: paused;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes spin {
+  to {
+    --angle: 1turn;
+  }
+}
+
+
+.book-now.active span{
+color:white !important;
+}
+
+.book-now.active{
+  color:white !important; 
+}
+
+.modal {
+  z-index: 9999 !important;
+}
+
+.service_card{
+  .feature-container{
+    height: 100% !important;
+  }
+  .feature-box-xl{
+    width: 90px !important;
+    height: 90px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    svg{
+      width: 40px !important;
+      height: 40px !important;
+    }
   }
 }

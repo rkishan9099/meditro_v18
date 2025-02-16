@@ -13,6 +13,7 @@ import "./vendor/themify/themify-icons.css";
 // StyleSheet
 import './App.scss';
 
+
 function App() {
 	return (
 		<div className="page-wraper">

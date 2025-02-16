@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Sticky from 'react-stickynode';
 
 // Images
-import logo from '../../images/logo2.png';
+import logo from '../../images/update-log.jpg';
 // import logoWhite from '../../images/logo-white.png';
 // import keymedSolution from '../../images/key-medsolutions.svg'
 
@@ -75,7 +75,7 @@ class Header extends Component{
 								<div className="secondary-menu">
 									<ul>
 										{/* <li className="search-btn"><button id="quikSearchBtn" type="button" className="btn-link"><i className="las la-search"></i></button></li> */}
-										<li className="num-bx"><a href="tel:+13362906077"><i className="fas fa-phone-alt"></i>+1 (336) 290-6077</a></li>
+										<li className="num-bx"><a href="tel:+13364999299"><i className="fas fa-phone-alt"></i>+1 (336) 499-9299</a></li>
 										<li className="btn-area"><Link to="/contact-us" className="btn btn-primary shadow">CONTACT US <i className="btn-icon-bx fas fa-chevron-right"></i></Link></li>
 									</ul>
 								</div>

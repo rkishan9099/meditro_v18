@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // Images
-import Logo from '../../images/logo.png';
+import Logo from '../../images/logo/logo.png';
 import footerBg from '../../images/background/footer.jpg';
 import ptImg1 from '../../images/shap/wave-blue.png';
 import ptImg2 from '../../images/shap/circle-dots.png';
@@ -58,7 +58,7 @@ class aboutSection extends Component{
 										<div className="contact-number">
 											<span>Contact Us</span>
 											<a href="mailto:info@keymedsolution.com">info@keymedsolution.com</a><br />
-											<a href="tel:+13362906077">+1 (336) 290-6077</a>
+											<a href="tel:+13364999299">+1 (336) 499-9299</a>
 										</div>
 									</div><br /> 
 									<div className="footer-social-link">
