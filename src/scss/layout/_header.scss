@@ -733,7 +733,7 @@
 			height:100vh;
 			@include transitionMedium;
 			top:0;
-			background-color:#171a1e;
+			// background-color:#171a1e;
 			margin:0;
 			z-index:99;
 			overflow-y: scroll;
@@ -795,12 +795,12 @@
 			border-color: rgba(255,255,255,0.1);
 			a{
 				font-size: 14px;
-				color: #fff;
+				color:$gray;
 			}
 			&:hover,
 			&.active{
 				& > a{
-					color:#fff;
+					color:$primary;
 					border-color: rgba(255,255,255,0.1);
 				}
 			}
@@ -815,7 +815,8 @@
 		}
 	}
 	.header-transparent .sticky-header.active .menu-links .nav > li > a {
-		color: #fff;
+		// color: #565acf;
+		color:$gray;
 	}
 }
 
