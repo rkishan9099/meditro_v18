@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Sticky from 'react-stickynode';
 
 // Images
-import logo from '../../images/update-log.jpg';
+import logo from '../../images/logo/logo.png';
 // import logoWhite from '../../images/logo-white.png';
 // import keymedSolution from '../../images/key-medsolutions.svg'
 
