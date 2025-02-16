@@ -175,7 +175,7 @@ export default function HowItWorksAndCTA() {
           </div>
         </div>
         <div className="flex flex-col gap-y-5 sm:tw-hidden">
-          <h2 className="tw-text-3xl tw-font-bold tw-text-center tw-mb-12 tw-flex tw-justify-center">
+          {/* <h2 className="tw-text-3xl tw-font-bold tw-text-center tw-mb-12 tw-flex tw-justify-center">
             <span className="tw-flex tw-flex-col tw-justify-between">
               <span className="tw-p-3 tw-text-accent-500">
                 How We Support You
@@ -197,7 +197,7 @@ export default function HowItWorksAndCTA() {
                 />
               </span>
             </span>
-          </h2>
+          </h2> */}
           <div className="tw-flex tw-flex-col tw-items-center">
             {steps.map((step, index) => (
               <motion.div
