@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
       const mailOptions = {
         from: '"KeyMed Solution" <info@digitechnobytes.com>', // Sender name & email
-      to: "kishan@yopmail.com", // Recipient email
+      to: "info@keymedsolution.com", // Recipient email
       subject: "New Evaluation Form Submission",
       html: `
         <h1>New Evaluation Form Submission</h1>
