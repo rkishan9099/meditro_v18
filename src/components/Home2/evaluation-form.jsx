@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
 import { services } from "../../utils/data";
+import { useNavigate } from "react-router-dom";
 
 // Define Zod schema for form validation
 const schema = z.object({
@@ -22,6 +23,7 @@ const EvaluationForm = () => {
   } = useForm({
     resolver: zodResolver(schema),
   });
+  const navigate = useNavigate();
 
   const [responseMessage, setResponseMessage] = useState("");
 
@@ -41,6 +43,8 @@ const EvaluationForm = () => {
       if (response.ok) {
         setResponseMessage("✅ Your request has been submitted successfully!");
         reset(); // Reset form after successful submission
+        navigate("/thank-you");
+
       } else {
         setResponseMessage("❌ Failed to submit. Please try again.");
       }
