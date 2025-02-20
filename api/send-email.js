@@ -5,7 +5,6 @@ export default async function handler(req, res) {
   const SmtpEmail = process.env.NEXT_EMAIL_ADDRESS
   const SmtpPassword = process.env.NEXT_EMAIL_PASSWORD
   if(req.method === "POST") {
-      console.log(req.body)
       const transporter = nodemailer.createTransport({
         host: "smtp.hostinger.com", // Hostinger SMTP server
         port: 587, // Use 465 for SSL, 587 for TLS
