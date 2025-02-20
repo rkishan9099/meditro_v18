@@ -9,8 +9,8 @@ export default async function handler(req, res) {
         port: 587, // Use 465 for SSL, 587 for TLS
         secure: false, // true for SSL, false for TLS
         auth: {
-          user:"info@digitechnobytes.com",// "info@keymedsolution.com", // Your Hostinger email
-          pass: "DigiA1b29099@@",//India@2025", // Your Hostinger email password
+          user:"info@keymedsolution.com",// "info@keymedsolution.com", // Your Hostinger email
+          pass: "India@2025",//India@2025", // Your Hostinger email password
         },
         tls: {
           rejectUnauthorized: false, // Prevents SSL issues
@@ -21,11 +21,11 @@ export default async function handler(req, res) {
       const { name, email, phone, practice } = req.body;
 
       const mailOptions = {
-        from: '"KeyMed Solution" <info@digitechnobytes.com>', // Sender name & email
-      to: "info@keymedsolution.com", // Recipient email
-      subject: "New Evaluation Form Submission",
-      html: `
-        <h1>New Evaluation Form Submission</h1>
+        from: '"KeyMed Solution" <info@keymedsolution.com>', // Sender name & email
+        to: "info@keymedsolution.com", // Recipient email
+        subject: "New Evaluation Form Submission",
+        html: `
+          <h1>New Evaluation Form Submission</h1>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
