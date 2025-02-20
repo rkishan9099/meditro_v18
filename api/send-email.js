@@ -2,6 +2,8 @@ const nodemailer = require("nodemailer");
 
 
 export default async function handler(req, res) {
+  const SmtpEmail = process.env.NEXT_EMAIL_ADDRESS
+  const SmtpPassword = process.env.NEXT_EMAIL_PASSWORD
   if(req.method === "POST") {
       console.log(req.body)
       const transporter = nodemailer.createTransport({
@@ -9,8 +11,8 @@ export default async function handler(req, res) {
         port: 587, // Use 465 for SSL, 587 for TLS
         secure: false, // true for SSL, false for TLS
         auth: {
-          user:"info@keymedsolution.com",// "info@keymedsolution.com", // Your Hostinger email
-          pass: "India@2025",//India@2025", // Your Hostinger email password
+          user:SmtpEmail,
+          pass: SmtpPassword, // Your Hostinger email password
         },
         tls: {
           rejectUnauthorized: false, // Prevents SSL issues
@@ -21,8 +23,8 @@ export default async function handler(req, res) {
       const { name, email, phone, practice } = req.body;
 
       const mailOptions = {
-        from: '"KeyMed Solution" <info@keymedsolution.com>', // Sender name & email
-        to: "info@keymedsolution.com", // Recipient email
+        from: `"KeyMed Solution" <${SmtpEmail}>`, // Sender name & email
+        to: SmtpEmail, // Recipient email
         subject: "New Evaluation Form Submission",
         html: `
           <h1>New Evaluation Form Submission</h1>
