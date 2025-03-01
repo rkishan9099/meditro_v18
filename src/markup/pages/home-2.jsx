@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Header from "../layout/header";
 import Main from "../../components/Home2/main";
 import WhyEvaluate from "../../components/Home2/why-evaluate";
@@ -12,25 +12,41 @@ import FinalCTASection from "../../components/Home2/FinalCallToAtion";
 import EvaluationFormModal from "../../components/Model/EvaluationFormModal";
 import SiteFooter from "../../components/footer/SiteFooter";
 import { Helmet } from "react-helmet";
+import { updateMetaTag } from "../../lib/utils";
+
+
+const metaInformation = [
+  {
+    key: "title",
+    value: "Free Medical Practice Assessment – Identify Missed Revenue",
+  },
+  {
+    key: "description",
+    value: "Get a free evaluation of your medical practice to uncover revenue leaks, billing inefficiencies, and growth opportunities. No cost, no obligation—sign up now!",
+  },
+  {
+    key: "google-site-verification",
+    value: "iPYAcF8mibClwS4PeljKHWU6Vfz5TIOP09L3h8wh8TI",
+  },
+];
+
 
 const HomePage2 = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  useLayoutEffect(()=>{
+    metaInformation.forEach((meta) => {
+      updateMetaTag(meta.key, meta.value);
+    });
+  },[])
   return (
     <>
       <Helmet>
         <title>Free Medical Practice Assessment – Identify Missed Revenue
         </title>
-        <meta
-          name="title"
-          content="Free Medical Practice Assessment – Identify Missed Revenue"
-        />
-        <meta
-          name="description"
-          content="Get a free evaluation of your medical practice to uncover revenue leaks, billing inefficiencies, and growth opportunities. No cost, no obligation—sign up now!"
-        />
-        <meta name="google-site-verification" content="iPYAcF8mibClwS4PeljKHWU6Vfz5TIOP09L3h8wh8TI" />
+        
 
       </Helmet>
       <Header />

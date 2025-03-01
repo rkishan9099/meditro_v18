@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Header from "../layout/header";
 import Hero from "../../components/Home/hero-1";
 import ServicesSection from "../../components/Home/services-section";
@@ -8,6 +8,22 @@ import CallToAction from "../../components/Home/call-to-action";
 import SiteFooter from "../../components/footer/SiteFooter";
 import EvaluationFormModal from "../../components/Model/EvaluationFormModal";
 import { Helmet } from "react-helmet";
+import { updateMetaTag } from "../../lib/utils";
+
+const metaInformation = [
+  {
+    key: "title",
+    value: "Medical Billing for New Clinics | Expert RCM Services",
+  },
+  {
+    key: "description",
+    value: "Launch your clinic with expert RCM services. From credentialing to billing, we handle it all—no upfront costs, no hidden fees. Get started today!",
+  },
+  {
+    key: "google-site-verification",
+    value: "iPYAcF8mibClwS4PeljKHWU6Vfz5TIOP09L3h8wh8TI",
+  },
+];
 
 const HomePage1 = () => {
   const [show, setShow] = useState(false);
@@ -15,21 +31,18 @@ const HomePage1 = () => {
   const handleShow = (e) => {
     e.preventDefault();
     setShow(true);
-  }
+  };
+
+  useLayoutEffect(() => {
+   metaInformation.forEach((meta) => {
+     updateMetaTag(meta.key, meta.value);
+   });
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>Medical Billing for New Clinics | Expert RCM Services</title>
-        <meta 
-          name="title" 
-          content="Medical Billing for New Clinics | Expert RCM Services"
-        />
-        <meta 
-          name="description" 
-          content="Launch your clinic with expert RCM services. From credentialing to billing, we handle it all—no upfront costs, no hidden fees. Get started today!"
-        />
-        <meta name="google-site-verification" content="iPYAcF8mibClwS4PeljKHWU6Vfz5TIOP09L3h8wh8TI" />
-
       </Helmet>
       <Header />
       <div className="tailwind-scope fold:tw-red-500 sm:tw-red-500">
@@ -37,11 +50,10 @@ const HomePage1 = () => {
         <ServicesSection />
         <BenefitsSection />
         <HowItWorksAndCTA />
-        <CallToAction handleShow={handleShow}/>
+        <CallToAction handleShow={handleShow} />
         <SiteFooter />
       </div>
       <EvaluationFormModal show={show} handleClose={handleClose} />
-
     </>
   );
 };

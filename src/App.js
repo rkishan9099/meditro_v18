@@ -12,13 +12,16 @@ import "./vendor/themify/themify-icons.css";
 
 // StyleSheet
 import './App.scss';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
 	return (
+		<BrowserRouter>
 		<div className="page-wraper">
 			<Markup />
 		</div>
+		</BrowserRouter>
 	);
 }
 

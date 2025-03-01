@@ -1,5 +1,11 @@
-import React, { Component } from "react";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import React, { Component, useEffect, useLayoutEffect } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
 
 // Elements
 import BackToTop from "./elements/back-top";
@@ -47,134 +53,154 @@ import OptimizeHealthcareFinancesRcmMasteryUnleashed from "./pages/optimize-heal
 import HomePage1 from "./pages/home-1";
 import HomePage2 from "./pages/home-2";
 import ThankYouPage from "./pages/thank-you";
+import { updateMetaTag } from "../lib/utils";
 // import handler from './pages/api/mail';
 
-class Markup extends Component {
-  render() {
-    return (
-      <>
-        <BrowserRouter>
-          <Routes>
-            <Route element={<ThemeLayout />}>
-              <Route path="*" element={<Error />} />
-              <Route path="/" element={<Index />} />
-              <Route path="/free-ationevalu" element={<HomePage1 />} />
-              <Route path="/rcm-assessment" element={<HomePage2 />} />
-              <Route path="/thank-you" element={<ThankYouPage />} />
+const metaInformation = [
+  {
+    key: "title",
+    value: "Key MedSolution",
+  },
+  {
+    key: "description",
+    value:
+      "Healthcare Billing and Coding solutions with Key MedSolutions. Enhance patient care, streamline operations.",
+  },
+  {
+    key: "google-site-verification",
+    value: "jSYeP6kahxdQcRahGF7NakY-1b2Isrc3cybhRV8SHXc",
+  },
+];
 
-              <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/service-detail" element={<ServiceDetail />} />
-              <Route path="/faq" element={<Faq />} />
-              <Route path="/contact-us" element={<ContactUs />} />
-              <Route path="/booking" element={<Booking />} />
-              <Route path="/blogs" element={<BlogGrid />} />
-              {/* <Route path='/blog-details' element={<BlogDetails />} /> */}
-              {/* <Route path='/api/mail' element={handler}/> */}
-              <Route
-                path="/how-medical-coding-impacts-the-revenue-cycle"
-                element={<BlogDetails1 />}
-              />
-              <Route
-                path="/how-AI-is-improving-medical-coding-processes-accuracy-and-efficiency"
-                element={<BlogDetails2 />}
-              />
-              <Route
-                path="/boost-your-practice's-performance-with-revenue-cycle-kpis"
-                element={<BlogDetails3 />}
-              />
-              <Route
-                path="/how-chiropractic-billing-services-work-for-medicare-beneficiaries"
-                element={<BlogDetails4 />}
-              />
-              <Route
-                path="/optimize-healthcare-Finances-rcm-mastery-unleashed"
-                element={<OptimizeHealthcareFinancesRcmMasteryUnleashed />}
-              />
-              <Route
-                path="/physician-billing-services"
-                element={<PhysicianBillingServices />}
-              />
-              <Route
-                path="/medical-claim-billing"
-                element={<MedicalClaimBilling />}
-              />
-              <Route
-                path="/internal-medicine-and-nephrology-billing-service"
-                element={<InternalMedicineAndNephrologyBillingServices />}
-              />
-              <Route
-                path="/radiology-billing-services"
-                element={<RadiologyBillingServices />}
-              />
-              <Route
-                path="/cardiology-medical-billing"
-                element={<CardiologyMedicalBilling />}
-              />
-              <Route
-                path="/improving-your-financial-health-with-profit-enhancement-services"
-                element={
-                  <ImprovingYourFinancialHealthWithProfitEnhancementServices />
-                }
-              />
-              <Route
-                path="/medical-billing-coding-services"
-                element={<MedicalBillingCodingServices />}
-              />
-              <Route
-                path="/ICD-10-medical-coding"
-                element={<ICD10MedicalCoding />}
-              />
-              <Route
-                path="/maximize-your-reimbursement-rate-with-our-medical-billing-and-collection-services"
-                element={
-                  <MaximizeYourReimbursementRateWithOurMedicalBillingAndCollectionServices />
-                }
-              />
-              <Route
-                path="/streamlining-medical-AR-recovery"
-                element={<StreamliningMedicalARRecovery />}
-              />
-              <Route
-                path="/practice-management"
-                element={<PracticeManagement />}
-              />
-              <Route
-                path="/verification-of-healthcare-insurance-eligibility"
-                element={<VerificationOfHealthcareInsuranceEligibility />}
-              />
-              <Route
-                path="/revenue-cycle-management-company"
-                element={<RevenueCycleManagementCompany />}
-              />
-              <Route
-                path="/denial-management-service"
-                element={<DenialManagementServices />}
-              />
-              <Route
-                path="/physician-credentialing"
-                element={<PhysicianCredentialing />}
-              />
-              <Route path="/our-specialities" element={<OurSpecialities />} />
-            </Route>
+const Markup = () => {
+  const path = useLocation();
 
-            <Route path="/form-login" element={<FormLogin />} />
-            <Route path="/form-register" element={<FormRegister />} />
-            <Route
-              path="/form-forget-password"
-              element={<FormForgetPassword />}
-            />
-          </Routes>
 
-          <PageScrollTop />
-        </BrowserRouter>
+  useEffect(() => {
+    if (!["/free-ationevalu", "/rcm-assessment"].includes(path.pathname)) {
+      metaInformation.forEach((meta) => {
+        updateMetaTag(meta.key, meta.value);
+      });
+      document.title="Key MedSolution"
+    }
+  }, [path.pathname]);
 
-        <BackToTop />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Routes>
+        <Route element={<ThemeLayout />}>
+          <Route path="*" element={<Error />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/free-ationevalu" element={<HomePage1 />} />
+          <Route path="/rcm-assessment" element={<HomePage2 />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
+
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/service-detail" element={<ServiceDetail />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/blogs" element={<BlogGrid />} />
+          {/* <Route path='/blog-details' element={<BlogDetails />} /> */}
+          {/* <Route path='/api/mail' element={handler}/> */}
+          <Route
+            path="/how-medical-coding-impacts-the-revenue-cycle"
+            element={<BlogDetails1 />}
+          />
+          <Route
+            path="/how-AI-is-improving-medical-coding-processes-accuracy-and-efficiency"
+            element={<BlogDetails2 />}
+          />
+          <Route
+            path="/boost-your-practice's-performance-with-revenue-cycle-kpis"
+            element={<BlogDetails3 />}
+          />
+          <Route
+            path="/how-chiropractic-billing-services-work-for-medicare-beneficiaries"
+            element={<BlogDetails4 />}
+          />
+          <Route
+            path="/optimize-healthcare-Finances-rcm-mastery-unleashed"
+            element={<OptimizeHealthcareFinancesRcmMasteryUnleashed />}
+          />
+          <Route
+            path="/physician-billing-services"
+            element={<PhysicianBillingServices />}
+          />
+          <Route
+            path="/medical-claim-billing"
+            element={<MedicalClaimBilling />}
+          />
+          <Route
+            path="/internal-medicine-and-nephrology-billing-service"
+            element={<InternalMedicineAndNephrologyBillingServices />}
+          />
+          <Route
+            path="/radiology-billing-services"
+            element={<RadiologyBillingServices />}
+          />
+          <Route
+            path="/cardiology-medical-billing"
+            element={<CardiologyMedicalBilling />}
+          />
+          <Route
+            path="/improving-your-financial-health-with-profit-enhancement-services"
+            element={
+              <ImprovingYourFinancialHealthWithProfitEnhancementServices />
+            }
+          />
+          <Route
+            path="/medical-billing-coding-services"
+            element={<MedicalBillingCodingServices />}
+          />
+          <Route
+            path="/ICD-10-medical-coding"
+            element={<ICD10MedicalCoding />}
+          />
+          <Route
+            path="/maximize-your-reimbursement-rate-with-our-medical-billing-and-collection-services"
+            element={
+              <MaximizeYourReimbursementRateWithOurMedicalBillingAndCollectionServices />
+            }
+          />
+          <Route
+            path="/streamlining-medical-AR-recovery"
+            element={<StreamliningMedicalARRecovery />}
+          />
+          <Route path="/practice-management" element={<PracticeManagement />} />
+          <Route
+            path="/verification-of-healthcare-insurance-eligibility"
+            element={<VerificationOfHealthcareInsuranceEligibility />}
+          />
+          <Route
+            path="/revenue-cycle-management-company"
+            element={<RevenueCycleManagementCompany />}
+          />
+          <Route
+            path="/denial-management-service"
+            element={<DenialManagementServices />}
+          />
+          <Route
+            path="/physician-credentialing"
+            element={<PhysicianCredentialing />}
+          />
+          <Route path="/our-specialities" element={<OurSpecialities />} />
+        </Route>
+
+        <Route path="/form-login" element={<FormLogin />} />
+        <Route path="/form-register" element={<FormRegister />} />
+        <Route path="/form-forget-password" element={<FormForgetPassword />} />
+      </Routes>
+
+      <PageScrollTop />
+
+      <BackToTop />
+    </>
+  );
+};
+
 function ThemeLayout() {
   return (
     <>
