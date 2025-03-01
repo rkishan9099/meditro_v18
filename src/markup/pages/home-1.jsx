@@ -5,9 +5,9 @@ import ServicesSection from "../../components/Home/services-section";
 import BenefitsSection from "../../components/Home/benefits-section";
 import HowItWorksAndCTA from "../../components/Home/how-it-works";
 import CallToAction from "../../components/Home/call-to-action";
-import Footer from "../layout/footer";
 import SiteFooter from "../../components/footer/SiteFooter";
 import EvaluationFormModal from "../../components/Model/EvaluationFormModal";
+import { Helmet } from "react-helmet";
 
 const HomePage1 = () => {
   const [show, setShow] = useState(false);
@@ -18,6 +18,19 @@ const HomePage1 = () => {
   }
   return (
     <>
+      <Helmet>
+        <title>Medical Billing for New Clinics | Expert RCM Services</title>
+        <meta 
+          name="title" 
+          content="Medical Billing for New Clinics | Expert RCM Services"
+        />
+        <meta 
+          name="description" 
+          content="Launch your clinic with expert RCM services. From credentialing to billing, we handle it all—no upfront costs, no hidden fees. Get started today!"
+        />
+        <meta name="google-site-verification" content="iPYAcF8mibClwS4PeljKHWU6Vfz5TIOP09L3h8wh8TI" />
+
+      </Helmet>
       <Header />
       <div className="tailwind-scope fold:tw-red-500 sm:tw-red-500">
         <Hero handleShow={handleShow} />

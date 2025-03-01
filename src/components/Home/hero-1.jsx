@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Shield, TrendingUp } from "lucide-react";
 import { Button } from "react-bootstrap";
-import doctorImg from "./../../images/main-banner/doctor.png";
+import doctorImg from "./../../images/home/doctor-bg.png";
+// import doctorImg from "./../../images/main-banner/doctor.png";
 import plusOrange from "../../images/shap/plus-orange.png";
 import squareBlue from "../../images/shap/square-blue.png";
 import heroShapeIcon2 from "../../images/home/heroShapeIcon2.png";
@@ -66,7 +67,7 @@ export default function Hero({ handleShow }) {
         {/* <h1 className="!tw-text-blue-500 !tw-green-red-500">dndmdd</h1> */}
 
         <div className="tw-absolute tw-inset-0 tw-overflow-hidden">
-          <div className="tw-absolute tw-top-20 tw-left-10 tw-w-72 tw-h-72 tw-bg-blue-200 tw-rounded-full tw-mix-blend-multiply tw-filter tw-blur-xl tw-opacity-70 tw-animate-blob" />
+          {/* <div className="tw-absolute tw-top-20 tw-left-10 tw-w-72 tw-h-72 tw-bg-blue-200 tw-rounded-full tw-mix-blend-multiply tw-filter tw-blur-xl tw-opacity-70 tw-animate-blob" /> */}
           <div className="tw-absolute tw-top-72 tw-right-10 tw-w-72 tw-h-72 tw-bg-green-200 tw-rounded-full tw-mix-blend-multiply tw-filter tw-blur-xl tw-opacity-70 tw-animate-blob tw-animation-delay-2000" />
           {/* <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" /> */}
         </div>
@@ -123,12 +124,16 @@ export default function Hero({ handleShow }) {
                     {...infiniteRotate}
                   />
                 </motion.div>
+                <div className="heading-bx hero-heading">
+
+
                 <motion.div
-                  className="tw-text-start tw-inline-block tw-bg-accent-100 tw-text-accent-600 tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-semibold tw-mb-2"
+                  className=" title-ext text-secondary tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-bold tw-mb-2"
                   {...fadeInUp}
-                >
+                  >
                   Launch Your Healthcare Practice
                 </motion.div>
+                  </div>
               </div>
               <motion.h1
                 className="tw-text-4xl lg:tw-text-6xl tw-font-bold tw-text-gray-900 tw-leading-tight tw-text-start"
@@ -141,12 +146,12 @@ export default function Hero({ handleShow }) {
               </motion.h1>
 
               <motion.h2
-                className="tw-text-xl lg:tw-text-2xl tw-text-gray-600 tw-mt-6 tw-text-start"
+                className="tw-text-xl lg:tw-text-2xl tw-text-[#1f2278] tw-mt-6 tw-text-start"
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
                 <TextGenerateEffect
-                  className="tw-text-xl lg:tw-text-2xl tw-!tw-font-bold tw-text-gray-600 tw-!tw-leading-tight"
+                  className="tw-text-xl lg:tw-text-2xl tw-!tw-font-bold tw-text-[#1f2278] tw-!tw-leading-tight"
                   words={subTitle}
                 />
               </motion.h2>
@@ -192,7 +197,7 @@ export default function Hero({ handleShow }) {
                 <motion.div
                   {...fadeInLeft}
                   {...hoverEffect}
-                  className="tw-absolute tw-left-0 tw-top-10"
+                  className="tw-absolute tw-left-0 tw-top-7"
                 >
                   <motion.img
                     src={heroShapeIcon2}

@@ -40,7 +40,7 @@ export const TypewriterEffect = ({
               {char}
             </motion.span>
           ))}
-          <motion.span className="tw-inline-block">&nbsp;</motion.span>
+          {/* <motion.span className="tw-inline-block">&nbsp;</motion.span> */}
         </div>
       ))}
     </motion.div>
@@ -54,7 +54,7 @@ export const TypewriterEffect = ({
       )}
     >
       {renderWords()}
-      <motion.span
+      {/* <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
@@ -62,7 +62,7 @@ export const TypewriterEffect = ({
           "tw-inline-block tw-rounded-sm tw-w-[4px] tw-h-4 md:tw-h-6 lg:tw-h-10 tw-bg-accent-500",
           cursorClassName
         )}
-      ></motion.span>
+      ></motion.span> */}
     </div>
   );
 };
@@ -86,7 +86,7 @@ export const TypewriterEffectSmooth = ({
               {char}
             </span>
           ))}
-          <span className="tw-inline-block">&nbsp;</span>
+          {/* <span className="tw-inline-block">&nbsp;</span> */}
         </div>
       ))}
     </div>
@@ -107,7 +107,7 @@ export const TypewriterEffectSmooth = ({
           {renderWords()}
         </div>
       </motion.div>
-      <motion.span
+      {/* <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
@@ -115,7 +115,7 @@ export const TypewriterEffectSmooth = ({
           "tw-block tw-rounded-sm tw-w-[4px] tw-h-4 sm:tw-h-6 xl:tw-h-12 tw-bg-accent-500",
           cursorClassName
         )}
-      ></motion.span>
+      ></motion.span> */}
     </div>
   );
 };

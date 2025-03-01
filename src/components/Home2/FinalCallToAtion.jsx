@@ -28,7 +28,7 @@ export default function FinalCTASection(props) {
   const { handleShow } = props;
   return (
     <>
-      <section className=" final-cta tw-relative tw-py-24 md:tw-py-32 lg:tw-py-40 tw-px-4 md:tw-px-6 lg:tw-px-8 tw-overflow-hidden">
+      <section className=" final-cta1 tw-relative tw-py-24 md:tw-py-32 lg:tw-py-40 tw-px-4 md:tw-px-6 lg:tw-px-8 tw-overflow-hidden">
         <img src={topImage} alt="top imaeg" className="tw-w-full tw-absolute tw-top-0 tw-left-0" />
         <motion.div
           {...fadeInFromTop}
@@ -171,7 +171,7 @@ export default function FinalCTASection(props) {
         </div> */}
           <div className="container">
             {/* <div className="contact-wraper"> */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{
                   opacity: 1,
@@ -185,7 +185,7 @@ export default function FinalCTASection(props) {
                 className="tw-w-full tw-h-full tw-mx-auto md:tw-py-30 tw-py-20"
               >
                 <EvaluationForm />
-              </motion.div>
+              </motion.div> */}
             {/* </div> */}
           </div>
       </div>

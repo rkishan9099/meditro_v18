@@ -58,8 +58,8 @@ class Markup extends Component {
             <Route element={<ThemeLayout />}>
               <Route path="*" element={<Error />} />
               <Route path="/" element={<Index />} />
-              <Route path="/home-1" element={<HomePage1 />} />
-              <Route path="/home-2" element={<HomePage2 />} />
+              <Route path="/free-ationevalu" element={<HomePage1 />} />
+              <Route path="/rcm-assessment" element={<HomePage2 />} />
               <Route path="/thank-you" element={<ThankYouPage />} />
 
               <Route path="/about-us" element={<AboutUs />} />

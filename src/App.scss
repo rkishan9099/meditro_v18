@@ -127,9 +127,9 @@
   width: 100%;
   height: 100%;
   background: url("./images/background/footer.jpg");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   // filter: brightness(1.18);
   z-index: -10;
   /* Send it behind the content */
@@ -342,5 +342,25 @@ color:white !important;
       width: 40px !important;
       height: 40px !important;
     }
+  }
+}
+
+.hero-heading{
+  .title-ext{
+    padding: 5px 15px;
+    background-repeat: repeat;
+    border: 1px solid rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+  }
+}
+
+
+@media (max-height: 628px) {
+  /* Your styles here */
+  body {
+    background-color: lightcoral;
+  }
+  .sub-menu{
+    max-height: 400px !important;
+    overflow-y: scroll !important;
   }
 }

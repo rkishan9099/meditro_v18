@@ -41,6 +41,17 @@ export default function BenefitsSection() {
             <BenefitCard key={index} {...benefit} index={index} />
           ))}
         </div>
+
+        <div className="tw-mt-6 tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-2 tw-text-center tw-mb-4">
+          <h6 className="tw-font-semibold tw-text-accent-400 !tw-mb-0">
+            Disclaimer:
+          </h6>
+          <p className=" tw-leading-tight !tw-p-0 !tw-m-0">
+            All services are subject to a{" "}
+            <b className="tw-font-extrabold">24-month contract</b> unless stated
+            otherwise. Terms & Conditions apply.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -28,7 +28,9 @@ export const TextGenerateEffect = ({
           return (
             (<motion.span
                 key={word + idx}
-                className={className}
+                className={className 
+                 
+                }
                 initial={{ opacity: 0, filter: filter ? "blur(10px)" : "none" }}
                 animate={{ opacity: 1, filter: "blur(0px)" }}
                 transition={{ duration: duration ? duration : 1, delay: idx * 0.50 }}
