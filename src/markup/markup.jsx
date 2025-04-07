@@ -54,6 +54,7 @@ import HomePage1 from "./pages/home-1";
 import HomePage2 from "./pages/home-2";
 import ThankYouPage from "./pages/thank-you";
 import { updateMetaTag } from "../lib/utils";
+import { SiteMetaData } from "../data/meta-data";
 // import handler from './pages/api/mail';
 
 const metaInformation = [
@@ -75,13 +76,23 @@ const metaInformation = [
 const Markup = () => {
   const path = useLocation();
 
-
   useEffect(() => {
     if (!["/free-ationevalu", "/rcm-assessment"].includes(path.pathname)) {
-      metaInformation.forEach((meta) => {
-        updateMetaTag(meta.key, meta.value);
-      });
-      document.title="Key MedSolution"
+      if (SiteMetaData[path.pathname]) {
+        const Metadata = SiteMetaData[path.pathname]?.data;
+        if (Metadata && Metadata?.length > 0) {
+          Metadata.forEach((meta) => {
+            updateMetaTag(meta.key, meta.value);
+          });
+        }
+        document.title =
+          SiteMetaData[path.pathname]?.title || "Key MedSolution";
+      } else {
+        metaInformation.forEach((meta) => {
+          updateMetaTag(meta.key, meta.value);
+        });
+        document.title = "Key MedSolution";
+      }
     }
   }, [path.pathname]);
 
