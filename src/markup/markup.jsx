@@ -53,7 +53,7 @@ import OptimizeHealthcareFinancesRcmMasteryUnleashed from "./pages/optimize-heal
 import HomePage1 from "./pages/home-1";
 import HomePage2 from "./pages/home-2";
 import ThankYouPage from "./pages/thank-you";
-import { updateMetaTag } from "../lib/utils";
+import { addCanonical, updateMetaTag } from "../lib/utils";
 import { SiteMetaData } from "../data/meta-data";
 // import handler from './pages/api/mail';
 
@@ -75,6 +75,7 @@ const metaInformation = [
 
 const Markup = () => {
   const path = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (!["/free-ationevalu", "/rcm-assessment"].includes(path.pathname)) {
@@ -94,6 +95,8 @@ const Markup = () => {
         document.title = "Key MedSolution";
       }
     }
+    const canonicalUrl = `https://keymedsolutions.com${path.pathname}`;
+    addCanonical(canonicalUrl);
   }, [path.pathname]);
 
   return (

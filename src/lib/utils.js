@@ -20,3 +20,16 @@ export const updateMetaTag = (name, content) => {
     document.head.appendChild(metaTag);
   }
 };
+
+
+export  const addCanonical = (url) => {
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) {
+    canonical.setAttribute('href', url);  
+  }else{
+    const newCanonical = document.createElement('link');
+    newCanonical.setAttribute('rel', 'canonical');
+    newCanonical.setAttribute('href', url);
+    document.head.appendChild(newCanonical);
+  }
+}
