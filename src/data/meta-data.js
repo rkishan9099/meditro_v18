@@ -40,6 +40,46 @@ export const SiteMetaData = {
       },
     ],
   },
+  "/medical-billing-coding-services": {
+    title: "Medical Coding Services | Medical Billing Services",
+    data: [
+      {
+        key: "title",
+        value:
+          "Medical Coding Services | Medical Billing Services",
+      },
+      {
+        key: "description",
+        value:
+          "Certified medical coding services ensure accuracy. Our medical billing services reduce denials and speed up reimbursements for your practice.",
+      },
+      {
+        key: "meta-title",
+        value:
+          "Medical Coding Services | Medical Billing Services",
+      },
+    ],
+  },
+  "/about-us": {
+    title: "About Key MedSolutions | Medical Billing Experts",
+    data: [
+      {
+        key: "title",
+        value:
+          "About Key MedSolutions | Medical Billing Experts",
+      },
+      {
+        key: "description",
+        value:
+          "Discover how Key MedSolutions delivers expert medical billing and coding services to help healthcare providers boost revenue and streamline operations.",
+      },
+      {
+        key: "meta-title",
+        value:
+          "About Key MedSolutions | Medical Billing Experts",
+      },
+    ],
+  },
   "/internal-medicine-and-nephrology-billing-service": {
     title: "Internal Medicine and Nephrology Medical Billing Services",
     data: [
